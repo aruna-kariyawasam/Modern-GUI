@@ -15,22 +15,14 @@ class MainApp(QWidget):
         super().__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
-        
-        # Initialize components
         self.serial_handler = SerialHandler()
         self.data_processor = DataProcessor()
-        
-        # Plot related variables
         self.plot_curve = None
         self.zoom_mode = False
         self.original_view = None
-        
-        # Setup UI and connections
         self.setup_ui()
         self.setup_connections()
         self.setup_plot_widget()
-        
-        # Initialize connection status
         self.update_connection_status(False)
         self.update_all_metric_labels()
     
@@ -41,7 +33,6 @@ class MainApp(QWidget):
     
     def setup_connections(self):
         """Setup all signal-slot connections"""
-        # UI button connections
         self.ui.connectBtn.clicked.connect(self.toggle_serial_connection)
         self.ui.startScanBtn.clicked.connect(self.start_scan)
         self.ui.stopScanBtn.clicked.connect(self.stop_scan)
@@ -51,13 +42,9 @@ class MainApp(QWidget):
         self.ui.exportPNG.clicked.connect(self.export_graph_as_png)
         self.ui.exportSS.clicked.connect(self.export_screenshot)
         self.ui.zoomBtn.clicked.connect(self.toggle_zoom)
-        
-        # Serial handler connections
         self.serial_handler.data_received.connect(self.on_data_received)
         self.serial_handler.connection_status_changed.connect(self.on_connection_status_changed)
         self.serial_handler.error_occurred.connect(self.on_error_occurred)
-        
-        # Data processor connections
         self.data_processor.metrics_updated.connect(self.on_metrics_updated)
     
     def setup_plot_widget(self):
@@ -76,7 +63,6 @@ class MainApp(QWidget):
         for port in ports:
             self.ui.comPort.addItem(port)
         
-        # Add other dropdown items
         self.ui.baudRate.addItems(['9600', '115200', '19200', '38400'])
         self.ui.scanMode.addItems(['Continuous', 'Single'])
         self.ui.plotMode.addItems(['Line', 'Scatter'])
@@ -267,7 +253,6 @@ class MainApp(QWidget):
         self.ui.snr.setText(metrics_text['snr'])
         self.ui.auc.setText(metrics_text['auc'])
     
-    # Signal handlers
     def on_data_received(self, x, y):
         """Handle new data received from serial"""
         self.data_processor.add_data_point(x, y)
