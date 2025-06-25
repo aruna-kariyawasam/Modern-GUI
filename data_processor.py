@@ -183,9 +183,9 @@ class DataProcessor(QObject):
     def get_metrics_text(self):
         """Get formatted text for all metrics"""
         return {
-            'peak_value': f"PV is {self.metrics['peak_value']:.2f} nm",
-            'centroid': f"C is {self.metrics['centroid']:.2f} nm",
-            'max_intensity': f"MaxI is {self.metrics['max_intensity']:.0f}",
+            'peak_value': f"Peak Value is {self.metrics['peak_value']:.2f} nm",
+            'centroid': f"Centroid is {self.metrics['centroid']:.2f} nm",
+            'max_intensity': f"Maximum Intensity is {self.metrics['max_intensity']:.0f}",
             'fwhm': f"FWHM is {self.metrics['fwhm']:.2f} nm",
             'snr': f"SNR is {self.metrics['snr']:.1f}",
             'auc': f"AUC is {self.metrics['auc']:.0f}"
