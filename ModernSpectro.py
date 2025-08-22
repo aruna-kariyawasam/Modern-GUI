@@ -9,6 +9,12 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+import os, sys
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    base_path = getattr(sys, "_MEIPASS", os.path.dirname(__file__))
+    return os.path.join(base_path, relative_path)
 
 
 class Ui_Form(object):
@@ -68,7 +74,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/settings.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(resource_path("Icons/settings.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.settingBtn.setIcon(icon)
         self.settingBtn.setIconSize(QtCore.QSize(25, 25))
         self.settingBtn.setObjectName("settingBtn")
@@ -92,7 +98,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/seo-report.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(resource_path("Icons/seo-report.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.reportBtn.setIcon(icon1)
         self.reportBtn.setIconSize(QtCore.QSize(25, 25))
         self.reportBtn.setObjectName("reportBtn")
@@ -116,7 +122,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/help.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(resource_path("Icons/help.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.helpBtn.setIcon(icon2)
         self.helpBtn.setIconSize(QtCore.QSize(25, 25))
         self.helpBtn.setObjectName("helpBtn")
@@ -135,7 +141,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/letter-s.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(resource_path("Icons/letter-s.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton.setIcon(icon3)
         self.pushButton.setIconSize(QtCore.QSize(60, 60))
         self.pushButton.setObjectName("pushButton")
@@ -201,7 +207,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/lan.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(resource_path("Icons/lan.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_2.setIcon(icon4)
         self.pushButton_2.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_2.setObjectName("pushButton_2")
@@ -269,7 +275,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon5 = QtGui.QIcon()
-        icon5.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/scatter-graph.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon5.addPixmap(QtGui.QPixmap(resource_path("Icons/scatter-graph.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_4.setIcon(icon5)
         self.pushButton_4.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_4.setObjectName("pushButton_4")
@@ -468,7 +474,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon6 = QtGui.QIcon()
-        icon6.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/statistics.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon6.addPixmap(QtGui.QPixmap(resource_path("Icons/statistics.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_3.setIcon(icon6)
         self.pushButton_3.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_3.setObjectName("pushButton_3")
@@ -606,7 +612,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon7 = QtGui.QIcon()
-        icon7.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/send.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon7.addPixmap(QtGui.QPixmap(resource_path("Icons/send.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.pushButton_5.setIcon(icon7)
         self.pushButton_5.setIconSize(QtCore.QSize(25, 25))
         self.pushButton_5.setObjectName("pushButton_5")
@@ -631,7 +637,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon8 = QtGui.QIcon()
-        icon8.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/png-file-.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon8.addPixmap(QtGui.QPixmap(resource_path("Icons/png-file-.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exportPNG.setIcon(icon8)
         self.exportPNG.setIconSize(QtCore.QSize(25, 25))
         self.exportPNG.setObjectName("exportPNG")
@@ -656,7 +662,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon9 = QtGui.QIcon()
-        icon9.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/csv-file.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon9.addPixmap(QtGui.QPixmap(resource_path("Icons/csv-file.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exportCSV.setIcon(icon9)
         self.exportCSV.setIconSize(QtCore.QSize(25, 25))
         self.exportCSV.setObjectName("exportCSV")
@@ -681,7 +687,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon10 = QtGui.QIcon()
-        icon10.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/display.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon10.addPixmap(QtGui.QPixmap(resource_path("Icons/display.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exportSS.setIcon(icon10)
         self.exportSS.setIconSize(QtCore.QSize(25, 25))
         self.exportSS.setObjectName("exportSS")
@@ -706,7 +712,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon11 = QtGui.QIcon()
-        icon11.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/data-analysis.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon11.addPixmap(QtGui.QPixmap(resource_path("Icons/data-analysis.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.exportFullReport.setIcon(icon11)
         self.exportFullReport.setIconSize(QtCore.QSize(25, 25))
         self.exportFullReport.setObjectName("exportFullReport")
@@ -768,7 +774,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/rocket.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon12.addPixmap(QtGui.QPixmap(resource_path("Icons/rocket.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.startScanBtn.setIcon(icon12)
         self.startScanBtn.setIconSize(QtCore.QSize(25, 25))
         self.startScanBtn.setObjectName("startScanBtn")
@@ -793,7 +799,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon13 = QtGui.QIcon()
-        icon13.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/stop-watch.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon13.addPixmap(QtGui.QPixmap(resource_path("Icons/stop-watch.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.stopScanBtn.setIcon(icon13)
         self.stopScanBtn.setIconSize(QtCore.QSize(25, 25))
         self.stopScanBtn.setObjectName("stopScanBtn")
@@ -818,7 +824,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon14 = QtGui.QIcon()
-        icon14.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/eraser.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon14.addPixmap(QtGui.QPixmap(resource_path("Icons/eraser.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.clearGrpBtn.setIcon(icon14)
         self.clearGrpBtn.setIconSize(QtCore.QSize(25, 25))
         self.clearGrpBtn.setObjectName("clearGrpBtn")
@@ -856,7 +862,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon15 = QtGui.QIcon()
-        icon15.addPixmap(QtGui.QPixmap("../../Modern GUI/Icons/zoom.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon15.addPixmap(QtGui.QPixmap(resource_path("Icons/zoom.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.zoomBtn.setIcon(icon15)
         self.zoomBtn.setIconSize(QtCore.QSize(25, 25))
         self.zoomBtn.setObjectName("zoomBtn")
